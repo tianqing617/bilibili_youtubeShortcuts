@@ -1,12 +1,11 @@
 // ==UserScript==
-// @name        哔哩哗哩仿youtbube快捷键功能
-// @namespace   interest
-// @include     http*://www.bilibili.com/video/av*
+// @name        New script 
+// @namespace   Violentmonkey Scripts
+// @match       *://*/*
 // @grant       none
-// @version     1.1
-// @author      刘天青
-// @description 找不到仿youtube快捷键脚本，那么自己造一个
-// @run-at      document-end
+// @version     1.0
+// @author      -
+// @description 2020/2/27 下午7:09:52
 // ==/UserScript==
 
 (function() {
