@@ -1,15 +1,16 @@
 // ==UserScript==
-// @name        哔哩哗哩（bilibili.com）播放器快捷键 
+// @name        哔哩哗哩仿youtbube快捷键功能
 // @namespace   interest
 // @include     http*://www.bilibili.com/video/av*
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      刘天青
 // @description 找不到仿youtube快捷键脚本，那么自己造一个
 // @run-at      document-end
 // ==/UserScript==
 
 (function() {
+  'use strict';
   // 注册快捷键对应的函数
   const shortcutMethodNames = {
     'f': 'fullScreenMode',
@@ -85,4 +86,4 @@
   }
 
   init();
-})()
+})();
