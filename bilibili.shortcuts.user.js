@@ -23,7 +23,7 @@
 
   // 根据class名称，获取dom对象
   function getBtnObjByClass(name) {
-    const btnObj = document.querySelector('.' + name);
+    var btnObj = document.querySelector('.' + name);
     if (btnObj) {
       return btnObj;
     } else {
@@ -77,7 +77,7 @@
     // 注册事件
     document.addEventListener('keydown', function(e) {
       if (e && e.key) {
-        const name = shortcutMethodNames[e.key];
+        var name = shortcutMethodNames[e.key];
         if (name) {
           processMethods[name]();
         }
