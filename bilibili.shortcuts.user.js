@@ -1,17 +1,18 @@
 // ==UserScript==
-// @name        New script 
-// @namespace   Violentmonkey Scripts
-// @match       *://*/*
+// @name        哔哩哗哩仿youtbube快捷键功能
+// @namespace   interest
+// @include     http*://www.bilibili.com/video/av*
 // @grant       none
-// @version     1.0
-// @author      -
-// @description 2020/2/27 下午7:09:52
+// @version     1.1
+// @author      刘天青
+// @description 找不到仿youtube快捷键脚本，那么自己造一个
+// @run-at      document-end
 // ==/UserScript==
 
 (function() {
   'use strict';
   // 注册快捷键对应的函数
-  const shortcutMethodNames = {
+  var shortcutMethodNames = {
     'f': 'fullScreenMode',
     'w': 'webScreenMode',
     't': 'threatreScreenMode',
@@ -41,7 +42,7 @@
   }
 
   // 点击快捷键，触发的方法
-  const processMethods = {
+  var processMethods = {
     // 全屏
     fullScreenMode: function() {
       console.log('full screen mode');
