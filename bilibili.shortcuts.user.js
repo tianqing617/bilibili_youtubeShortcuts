@@ -23,9 +23,9 @@
 
   // 根据class名称，获取dom对象
   function getBtnObjByClass(name) {
-    const btnObj = document.getElementsByClassName(name);
-    if (btnObj && btnObj.length === 1) {
-      return btnObj[0];
+    const btnObj = document.querySelector('.' + name);
+    if (btnObj) {
+      return btnObj;
     } else {
       console.log('网页代码被改变，脚本已不适用！');
       return null;
@@ -45,7 +45,7 @@
   var processMethods = {
     // 全屏
     fullScreenMode: function() {
-      console.log('full screen mode');
+      // console.log('full screen mode');
       // 找到功能键的容器
       clickButton(getBtnObjByClass('bilibili-player-video-web-fullscreen'));
     },
