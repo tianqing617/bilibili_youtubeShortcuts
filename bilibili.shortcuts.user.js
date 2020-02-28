@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        哔哩哗哩仿youtbube快捷键功能
+// @name        哔哩哗哩仿youtube快捷键功能
 // @namespace   interest
 // @include     http*://www.bilibili.com/video/av*
 // @grant       none
