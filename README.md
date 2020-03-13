@@ -10,6 +10,8 @@
 | 弹幕开关 | c |
 | 循环播放 | r |
 
+> 后续计划：自动播放、自定义快捷键...
+
 ### 二、说明
 主页面地址：[https://github.com/tianqing617/bilibili_youtubeShortcuts](https://github.com/tianqing617/bilibili_youtubeShortcuts)  
 问题反馈：[https://github.com/tianqing617/bilibili_youtubeShortcuts/issues](https://github.com/tianqing617/bilibili_youtubeShortcuts/issues)  
