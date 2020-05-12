@@ -2,7 +2,7 @@
 // @name        哔哩哗哩仿youtube快捷键功能
 // @homepageURL https://github.com/tianqing617/bilibili_youtubeShortcuts
 // @namespace   interest
-// @include     http*://www.bilibili.com/video/av*
+// @include     http*://www.bilibili.com/video/BV*
 // @grant       none
 // @version     1.1
 // @author      刘天青
