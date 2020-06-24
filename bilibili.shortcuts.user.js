@@ -37,8 +37,10 @@
   function clickButton(button) {
     if (button) {
       button.click();
+      return true;
     } else {
       console.log('网页代码被改变，脚本已不适用！');
+      return false;
     }
   }
 
@@ -48,42 +50,55 @@
     fullScreenMode: function() {
       // console.log('full screen mode');
       // 找到功能键的容器
-      clickButton(getBtnObjByClass('bilibili-player-video-web-fullscreen'));
+      return clickButton(getBtnObjByClass('bilibili-player-video-web-fullscreen'));
     },
     // 网页全屏
     webScreenMode: function() {
-      clickButton(getBtnObjByClass('bilibili-player-video-web-fullscreen'));
+      return clickButton(getBtnObjByClass('bilibili-player-video-web-fullscreen'));
     },
     // 剧院模式
     threatreScreenMode: function() {
-      clickButton(getBtnObjByClass('bilibili-player-video-btn-widescreen'));
+      return clickButton(getBtnObjByClass('bilibili-player-video-btn-widescreen'));
     },
     // 静音
     muteMode: function() {
-      clickButton(getBtnObjByClass('bilibili-player-iconfont-volume'));
+      return clickButton(getBtnObjByClass('bilibili-player-iconfont-volume'));
     },
     // 字幕
     barrageMode: function() {
       // clickButton(getBtnObjByClass('bilibili-player-iconfont-subtitle'));
-      clickButton(getBtnObjByClass('bilibili-player-iconfont-subtitle'));
+      return clickButton(getBtnObjByClass('bilibili-player-iconfont-subtitle'));
     },
     // 循环
     repeatMode: function() {
-      clickButton(getBtnObjByClass('bilibili-player-video-btn-repeat'));
+      return clickButton(getBtnObjByClass('bilibili-player-video-btn-repeat'));
     },
   }
 
   function init() {
     // console.log('init...');
-    // 注册事件
-    document.addEventListener('keydown', function(e) {
+
+    var pressKeyborder = function(e) {
       if (e && e.key) {
         var name = shortcutMethodNames[e.key];
         if (name) {
-          processMethods[name]();
+          return processMethods[name]();
+        } else {
+          return false;
         }
       }
-    });
+    }
+
+    // 注册事件
+    document.addEventListener('keydown', pressKeyborder);
+
+    // 默认打开网页模式
+    var timer = setInterval(function() {
+      var result = pressKeyborder({ key: 'w' });
+      if (result) {
+        clearInterval(timer);
+      }
+    }, 1000);
   }
 
   init();
