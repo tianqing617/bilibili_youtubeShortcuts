@@ -93,12 +93,12 @@
     document.addEventListener('keydown', pressKeyborder);
 
     // 默认打开网页模式
-    var timer = setInterval(function() {
-      var result = pressKeyborder({ key: 'w' });
-      if (result) {
-        clearInterval(timer);
-      }
-    }, 1000);
+    // var timer = setInterval(function() {
+    //   var result = pressKeyborder({ key: 'w' });
+    //   if (result) {
+    //     clearInterval(timer);
+    //   }
+    // }, 1000);
   }
 
   init();
